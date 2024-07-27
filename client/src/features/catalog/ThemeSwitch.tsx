@@ -58,11 +58,6 @@ const MaterialUIThemeSwitch = styled(Switch)(({ theme }) => ({
     
   export default function ThemeSwitch({darkMode, handleThemeChange}: Props) {
     return (
-      <FormGroup>
-        <FormControlLabel
-          control={<MaterialUIThemeSwitch checked={darkMode} onChange={handleThemeChange} sx={{ m: 1 }}/>}
-          label="Theme Mode"
-        />
-      </FormGroup>
+          <MaterialUIThemeSwitch checked={darkMode} onChange={handleThemeChange} sx={{ m: 2 }}/>
     );
   }
