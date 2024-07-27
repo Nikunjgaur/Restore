@@ -1,0 +1,24 @@
+import { useState, useEffect } from "react";
+import { Product } from "../../products"
+import ProductList from "./ProductList";
+
+
+
+export default function Cataloge() {
+
+    const [products, setProducts] = useState<Product[]>([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/api/products')
+            .then(response => response.json())
+            .then(data => setProducts(data))
+    }, [])
+
+
+    return (
+        <>
+            <ProductList products={products} />
+        </>
+
+    )
+}
