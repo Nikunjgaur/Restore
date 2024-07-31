@@ -37,7 +37,7 @@ interface Props {
 
 export default function Header({ darkMode, handleThemeChange }: Props) {
     return (
-        <AppBar position="static" sx={{ mb: 4 }}>
+        <AppBar position="sticky" sx={{ mb: 4 }}>
             <Toolbar sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                 <Box display='flex' alignItems='center'>
                     <Typography variant='h6' component={NavLink}
@@ -83,8 +83,6 @@ export default function Header({ darkMode, handleThemeChange }: Props) {
                         ))}
                     </List>
                 </Box>
-
-
             </Toolbar>
         </AppBar>
     )
